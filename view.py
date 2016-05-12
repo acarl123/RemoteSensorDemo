@@ -41,7 +41,7 @@ class MainFrame(wx.Frame):
 
         bSizer1 = wx.BoxSizer(wx.VERTICAL)
 
-        self.plotter = plot.PlotCanvas(self. wx.ID_ANY, )
+        self.plotter = plot.PlotCanvas(self, wx.ID_ANY, )
 
         bSizer1.Add(self.plotter, 1, wx.ALL | wx.EXPAND, 5)
 
