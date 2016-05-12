@@ -41,11 +41,14 @@ class MainFrame(wx.Frame):
 
         bSizer1 = wx.BoxSizer(wx.VERTICAL)
 
-        self.plotter = plot.PlotCanvas(self, wx.ID_ANY, )
+        self.plotter = plot.PlotCanvas(self. wx.ID_ANY, )
+
         bSizer1.Add(self.plotter, 1, wx.ALL | wx.EXPAND, 5)
 
         self.SetSizer(bSizer1)
         self.Layout()
+        self.timerUpdate = wx.Timer()
+        self.timerUpdate.SetOwner(self, wx.ID_ANY)
 
         self.Centre(wx.BOTH)
 
