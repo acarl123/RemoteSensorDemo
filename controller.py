@@ -44,8 +44,9 @@ class MainController:
         self.mainWindow.plotter.Clear()
 
     def update(self, event):
-        # if self.inputQ.empty(): return
-        data = random.randint(20,40)
+        if self.inputQ.empty(): return
+        # data = random.randint(20,40)
+        data = self.inputQ.get()
         self.data.append(data)
         line = plot.PolyLine([(index, item) for index, item in enumerate(self.data)], legend='', colour='blue', width=2)
         gc = plot.PlotGraphics([line], 'Temperature', 'Time (s)', 'Temperature')
