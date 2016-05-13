@@ -21,5 +21,5 @@ if __name__ == '__main__':
     controller = MainController(inputQ)
     controller.show()
     app.debug = False
-    thread.start_new(app.run, tuple(), {'host' : '0.0.0.0'})
+    thread.start_new(app.run, tuple(), {'host' : '192.168.173.1'})
     wxapp.MainLoop()
